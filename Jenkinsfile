@@ -6,7 +6,7 @@ pipeline {
       defaultContainer 'regression-gitbase'
       containerTemplate {
         name 'regression-gitbase'
-        image 'srcd/regression-gitbase:v0.1.0'
+        image 'srcd/regression-gitbase:v0.2.0'
         ttyEnabled true
         command 'cat'
       }
