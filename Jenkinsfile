@@ -19,6 +19,11 @@ pipeline {
   }
   triggers { pollSCM('0 0,12 * * *') }
   stages {
+    stage('Test') {
+      steps {
+        sh 'curl myip.ninja'
+      }
+    }
     stage('Run') {
       when { branch 'master' }
       steps {
